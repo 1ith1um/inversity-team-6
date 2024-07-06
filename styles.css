@@ -2,24 +2,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Example background color */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #063970;
     color: white;
     padding: 1em;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
+.logo {
+    margin-right: 1em; /* Adjust margin as needed */
+    background-color: #063970; /* Match the header background color */
+    padding: 0.5em;
+    border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+
+.logo img {
+    max-height: 50px; /* Adjust maximum height of the logo */
+}
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex; /* Ensure horizontal layout */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 1em;
+    margin-right: 2em; /* Adjust margin as needed to space out the items */
 }
 
 nav ul li a {
@@ -28,22 +45,43 @@ nav ul li a {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2em;
 }
 
-#map {
-    height: 400px; /* Adjust the height as needed */
-    margin-top: 2em;
-    border: 2px solid #4CAF50;
+#keyBox {
+    background-color: #063970;
+    color: white;
+    padding: 1em;
     border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2em; /* Adjust margin as needed */
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+}
+
+#map {
+    height: 400px; /* Adjust map height as needed */
+    width: 100%; /* Ensure map fills the width of its container */
+    max-width: 800px; /* Limit map width */
+    margin-top: 2em; /* Adjust margin as needed */
+}
+
+.content {
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+}
+
+section {
+    padding: 2em 0;
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #063970;
     color: white;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
