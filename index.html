@@ -12,16 +12,21 @@
         <h1>My Website</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="#" id="homeBtn">Home</a></li>
+                <li><a href="#aboutSection" id="aboutBtn">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Welcome to My Website</h2>
-        <p>This is a basic layout for a simple website. You can add your content here.</p>
+        <section id="homeSection">
+            <h2>Welcome to My Website</h2>
+            <p>This is a basic layout for a simple website. You can add your content here.</p>
+        </section>
+        <section id="aboutSection">
+            <h2>About Us</h2>
+            <p>This section contains information about our company.</p>
+        </section>
         <div id="map"></div>
     </main>
     <footer>
@@ -29,5 +34,32 @@
     </footer>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="scripts.js"></script>
+    <script>
+        // Smooth scrolling for navigation links within the same page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navigation functionality for Home and About buttons
+        document.getElementById('homeBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('aboutBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            var aboutSection = document.getElementById('aboutSection');
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+    <p>THISihsihfishhsfihs</p>
 </body>
 </html>
